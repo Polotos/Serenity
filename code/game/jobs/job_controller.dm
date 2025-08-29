@@ -263,23 +263,23 @@ var/global/datum/controller/occupations/job_master
 					if(age < job.minimum_character_age) // Nope.
 						continue
 
-                                        var/weight
-                                        if(age <= job.minimum_character_age + 10)
-                                                weight = 3 // Still a bit young.
-                                        else if(age <= job.ideal_character_age - 10)
-                                                weight = 6 // Better.
-                                        else if(age <= job.ideal_character_age + 10)
-                                                weight = 10 // Great.
-                                        else if(age <= job.ideal_character_age + 20)
-                                                weight = 6 // Still good.
-                                        else
-                                                weight = 3 // Geezer.
+					var/weight
+					if(age <= job.minimum_character_age + 10)
+						weight = 3 // Still a bit young.
+					else if(age <= job.ideal_character_age - 10)
+						weight = 6 // Better.
+					else if(age <= job.ideal_character_age + 10)
+						weight = 10 // Great.
+					else if(age <= job.ideal_character_age + 20)
+						weight = 6 // Still good.
+					else
+						weight = 3 // Geezer.
 
-                                        if(weight)
-                                                weightedCandidates[V] = weight
-                                        else
-                                                // If there's ABSOLUTELY NOBODY ELSE
-                                                if(candidates.len == 1) weightedCandidates[V] = 1
+					if(weight)
+						weightedCandidates[V] = weight
+					else
+						// If there's ABSOLUTELY NOBODY ELSE
+						if(candidates.len == 1) weightedCandidates[V] = 1
 
 
 				var/mob/new_player/candidate = pickweight(weightedCandidates)
