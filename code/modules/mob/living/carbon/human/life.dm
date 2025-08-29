@@ -929,7 +929,6 @@
 		mind.changeling.regenerate()
 
 /mob/living/carbon/human/proc/handle_shock()
-	..()
 	if(status_flags & GODMODE)	return 0	//godmode
 	if(!can_feel_pain())
 		shock_stage = 0
@@ -1294,7 +1293,6 @@
 					var/obj/effect/decal/cleanable/bloodpool/B = locate(/obj/effect/decal/cleanable/bloodpool) in loc
 					if(!B)
 						B = new /obj/effect/decal/cleanable/bloodpool(loc)
-						..()
 						return 0
 					else
 						return 0
