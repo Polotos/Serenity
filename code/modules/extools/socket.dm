@@ -27,7 +27,7 @@
 /datum/socket/proc/close()
 
 /world/proc/enable_sockets()
-	call("byond-extools.dll", "init_sockets")()
+	call_ext("byond-extools.dll", "init_sockets")()
 
 /* Example:
 
